@@ -1,5 +1,5 @@
 import styles from '../styles/Home.module.css'
-import React, { Component, useEffect, useRef, useState, useCallback } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
 /**
