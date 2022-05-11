@@ -93,6 +93,9 @@ const Home = () => {
     }, 200);
   }
 
+  const _testFunction = () =>{
+    console.log("push error");
+  }
 
   return (
     <>
