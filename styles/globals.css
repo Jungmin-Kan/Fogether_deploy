@@ -27,3 +27,17 @@ html::-webkit-scrollbar {
   display: none;
   width: 0 !important;
 }
+
+
+/* 애니메이션 테스트 */
+
+section {
+  display: flex;
+  justify-content: space-between;
+  padding: 5%;
+}
+section div {
+  background-color: #ff9800;
+  width: 23%;
+  height: 300px;
+}

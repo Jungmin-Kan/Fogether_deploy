@@ -1,0 +1,28 @@
+.sa {
+    opacity: 0;
+    /* 애니메이션 타입 */
+    transition: all .5s ease;
+    /* 진행 방향 */
+    transform: translate(0, 100px);
+
+  }
+
+  .show {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* 구분 */
+
+  .sah{
+    opacity: 1;
+    /* 애니메이션 타입 */
+    transition: all .5s ease;
+    /* 진행 방향 */
+    transform: translate(0, 100px); /*x, y 변화크기*/
+  }
+  
+  .hidden {
+    opacity: 0;
+    transform: none;
+  }
