@@ -1,10 +1,17 @@
-import '../styles/globals.css'
+import '../styles/globals.css';
+import Head from 'next/head';
+import 'react-slideshow-image/dist/styles.css'
+import styles from '../styles/Home.module.css'
+import React, { useEffect, useRef, useState } from 'react';
 
-// 공통 컴포넌트 csr 적용
 const MyApp = ({ Component, pageProps }) => {
+
   return (
     <>
-      <Component {...pageProps} />
+      <Head>
+        <title>Fogether</title>
+      </Head>
+      <Component {...pageProps} styles={styles}/>
     </>
   );
 }

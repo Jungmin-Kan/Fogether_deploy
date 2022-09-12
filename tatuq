@@ -1,0 +1,58 @@
+[33mcommit 048666455cc26245a957398afa70a56d0fd3a37c[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Merge: ddbaac0 08ceaec
+Author: kjmTJ <kgjm328@yonsei.ac.kr>
+Date:   Wed May 11 23:42:17 2022 +0900
+
+    m
+
+[33mcommit ddbaac091fbf0d7b1733e48e5857ed3f0e66c0db[m
+Author: kjmTJ <kgjm328@yonsei.ac.kr>
+Date:   Wed May 11 23:26:51 2022 +0900
+
+    remove useCallback
+
+[33mcommit 08ceaecfb6aa880947d692718768ee12926886cf[m
+Author: kjmTJ <51221534+kjmTJ@users.noreply.github.com>
+Date:   Wed May 11 21:57:43 2022 +0900
+
+    Update README.md
+
+[33mcommit 24196b3f910d928dc16214ee2dabd883ad4b9f24[m
+Author: kjmTJ <51221534+kjmTJ@users.noreply.github.com>
+Date:   Wed May 11 21:56:23 2022 +0900
+
+    Update package.json
+    
+    패키지 추가
+
+[33mcommit 9ca7a7496c10f1ade4790f124702bde4018313ff[m
+Author: kjmTJ <kgjm328@yonsei.ac.kr>
+Date:   Wed May 11 21:52:47 2022 +0900
+
+    update package.json
+
+[33mcommit 3aebf537c629f6f9c0558a77c6f3d74b7b31f268[m
+Author: kjmTJ <51221534+kjmTJ@users.noreply.github.com>
+Date:   Wed May 11 21:51:29 2022 +0900
+
+    Update README.md
+    
+    참고사항 추가
+
+[33mcommit 2080f786aca5a2a70a17ceda0f39ed77c299fe9c[m
+Author: kjmTJ <kgjm328@yonsei.ac.kr>
+Date:   Wed May 11 21:45:30 2022 +0900
+
+    update pages
+
+[33mcommit e9e9aab172f154bc6a67bc8688b7fa168701333a[m
+Author: kjmTJ <kgjm328@yonsei.ac.kr>
+Date:   Wed May 11 21:41:48 2022 +0900
+
+    first commit
+
+[33mcommit 60e64af212bd11db749c29838b80573e6dcee269[m
+Author: kjmTJ <kgjm328@yonsei.ac.kr>
+Date:   Mon May 9 16:53:53 2022 +0900
+
+    Initial commit from Create Next App

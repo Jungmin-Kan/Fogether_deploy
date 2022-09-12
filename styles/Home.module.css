@@ -11,6 +11,7 @@
 
 .footer {
   display: flex;
+  flex-direction: column;
   flex: 1;
   padding: 2rem 0;
   border-top: 1px solid #eaeaea;
@@ -18,30 +19,85 @@
   align-items: center;
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+.btnimg {
+  background: url(../public/fbtn.png);
+  background-size: cover;
+  width: 220px;
+  height: 75px;
+  background-position: center;
 }
 
+.btnimg:hover {
+  transform: scale(1.3);
+}
 
-.btn {
+.btnimg:active {
+  position: relative;
+  top: 3px;
+}
+
+/* html 버튼 */
+/* .btn {
+  border: 0px solid;
   background: #ff7ab4;
   width: 35%;
   padding: 10px;
   font-weight: 600;
+  font-size: 30px;
   line-height: 50px;
+  color: #FFF;
+  border-radius: 5px;
+  transition: all 0.5s;
+} */
+
+/* ===================== */
+
+.form_parent {
+  /* display: none; */
+  height: 20%;
+  opacity: 0;
+  transform: none;
+}
+
+.form {
+  flex: 1;
+  height: 30px;
+
+}
+
+.form>input[type="text"] {
+  width: 200px;
+  height: 100%;
+  border: 2px solid #ff7089;
+  border-radius: 5px;
+  font-weight: 200;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 20px;
+}
+
+.btn_send_ph {
+  margin-left: 10px;
+  border: 0px solid;
+  background: #ff7ab4;
+  width: 100px;
+  height: 100%;
   color: #FFF;
   border-radius: 5px;
   transition: all 0.5s;
 }
 
+
 .btn:hover {
   background: #ff006f;
 }
 
+.btn_send_ph:hover {
+  background: #ff006f;
+}
 
+
+/* ===================== */
 .part {
   position: relative;
   width: 100vw;
@@ -55,24 +111,56 @@
   /* 일반 a, div 가운데 정렬 */
 }
 
-.part:nth-child(odd) {
-  background-color: #F9F3EE;
+/* 타이틀 */
+.part_slide_title {
+  background: url(../public/titlefoo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 100% 100%;
+  height: 30%;
+  width: 100%;
 }
 
-.part:nth-child(even) {
-  background-color: #F9CEEE;
+/* 슬라이드 뷰 */
+.part_slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url(../public/app_part_ground.jpg);
+  width: 100vw;
+  height: 130vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 100% 100%;
+  background-position-x: center;
+
 }
 
-/* .part:nth-child(3){
-  background-color: #F9F3EE;
+/* 슬라이드 배치 */
+.slide {
+  width: 60%;
+  align-items: center;
+  justify-content: center;
 }
 
-.part:nth-child(4){
-  background-color: #F9CEEE;
-} */
+/* 4번째 예약자 카운터 뷰 */
+.part:nth-child(5) {
+  width: 100%;
+  height: 100vh;
+  background: url(../public/fsection3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
+  background-size: 100% 100%;
+  /* padding: 30; */
+}
+
+/* 예약자 카운터 */
 .count {
+  border: 1px solid black;
   border-radius: 8px;
+  border-width: 3px;
   width: 80px;
   height: 80px;
   margin: 10px;
@@ -83,111 +171,260 @@
   align-items: center;
   text-align: center;
   font-size: 60px;
+  opacity: 0;
+}
+
+.modal {
+  position: fixed;
+  left: 35.5%;
+  top: 30%;
+  overflow-y: scroll;
+  width: 400px;
+  height: 300px;
+  text-align: left;
+  padding: 15px;
+  z-index: 3;
+  background-color: #ffffff;
+  border-radius: 5px;
+  /* background-color: rgba(0, 0, 0, 0.295); */
+}
+
+.modal::-webkit-scrollbar {
+  display: none;
+  }
+
+.modal_close{
+  background-color: rgba(0, 0, 0, 0);
+  border: 0px solid;
+  font-size: 20px;
   font-weight: bold;
-}
-
-.lovelyimg {
-  max-width: 40%;
-  /* width: 30%; */
-  /* height: 30vh; */
-  max-height: 100%;
-  /* height:auto; */
-}
-
-
-.randomFoodbox {
+  top: 10px;
+  left: 91%;
   position: absolute;
+  z-index: 1;
+}
+
+.modal_close:hover{
+  color: red;
+  transition-duration: 0.5s;
+
+}
+.modal_btn_wrap{
+  position: fixed;
+  text-align: center;
+  left:40%;
+  top: 70%;
+  width:300px;
+}
+.modal_opinion_cancel{
+  background-color:rgb(255, 198, 198);
+  width:30%;
+  height:30px;
+  border: 0px solid;
+  margin:5px;
+  border-radius:5px;
+}
+
+.modal_opinion_agree{
+  background-color:rgb(180, 241, 180);
+  width:30%;
+  height:30px;
+  border: 0px solid;
+  margin:5px;
+  border-radius:5px;
+}
+ 
+.modal_opinion_cancel:active, .modal_opinion_agree:active {
+  position: relative;
+  top: 2px;
+}
+
+.reservation_btn{
+  text-align: center;
+  position: fixed;
+  left: 88%;
+  top: 80%;
+  background-color: #ff4a98;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+}
+.reservation_btn_text{
+  position: absolute;
+  top: 40px;
+  left: 15px;
+  font-size: 20px;
+}
+.numwrap{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  height: 30%;
+  margin-top: 10%;
+}
+/* 사전예약 포지션 */
+@media all and (max-width: 900px) {
   
-}
-
-
-
-@media all and (max-width: 1024px){
-	/* //브라우저 창 width가 1024px보다 작아지는 순간부터 적용
-	//태블릿 */
-  .fontfood{
-    position: absolute;
-    font-size: 5vmin;
-    left: 36.5%;
-    top:1.5%;
+  .reservation_btn{
+    text-align: center;
+    position: fixed;
+    left: 85%;
+    top: 80%;
+    background-color: #ff4a98;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
   }
 }
-@media all and (max-width: 768px){
-	/* //브라우저 창 width가 768px보다 작아지는 순간부터 적용 */
-	/* //모바일 */
-  .fontfood{
-    position: absolute;
-    font-size: 10vmin;
-    left: 31%;
-    top:0.5%;
+@media all and (max-width: 700px) {
+  
+  .reservation_btn{
+    text-align: center;
+    position: fixed;
+    left: 80%;
+    top: 80%;
+    background-color: #ff4a98;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
   }
-  .fontpfood{
+  .reservation_btn_text{
     position: absolute;
-    font-size: 10vmin;
-    left: 63.5%;
-    top:6%;
-  }
-}
-@media all and (min-width: 768px){
-	/* //브라우저 창 width가 768px보다 커지는 순간부터 적용
-	//태블릿 */
-  .fontfood{
-    position: absolute;
-    font-size: 7vmin;
-    left: 36.5%;
-    top:1.5%;
-  }
-
-  .fontpfood{
-    position: absolute;
-    font-size: 7vmin;
-    left: 60%;
-    top:9%;
-  }
-
-}
-@media all and (min-width: 1024px){
-	/* //브라우저 창 width가 1024px보다 커지는 순간부터 적용
-	//데스크탑 */
-  .fontfood{
-    position: absolute;
-    font-size: 7vmin;
-    left: 41%;
-    top:0.5%;
+    top: 40px;
+    left: 15px;
+    font-size: 20px;
   }
 }
-
-@media all and (min-width: 1300px){
-	/* //브라우저 창 width가 1024px보다 커지는 순간부터 적용
-	//데스크탑 */
-  .fontfood{
-    position: absolute;
-    font-size: 7vmin;
-    left: 42.4%;
-    top:1.0%;
-  }
-  .fontpfood{
-    position: absolute;
-    font-size: 7vmin;
-    left: 56%;
-    top:8%;
+@media all and (max-width: 640px) {
+  
+  .reservation_btn{
+    text-align: center;
+    position: fixed;
+    left: 70%;
+    top: 80%;
+    background-color: #ff4a98;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
   }
 }
 
 
-@media all and (min-width: 1600px){
-	/* //브라우저 창 width가 1024px보다 커지는 순간부터 적용
-	//데스크탑 */
-  .fontfood{
-    position: absolute;
-    font-size: 7vmin;
-    left: 43.5%;
-    top:1.3%;
+@media all and (max-width: 768px) {
+
+  /* 브라우저 창 width가 768px보다 작아지는 순간부터 적용 */
+  /* 모바일 */
+  
+
+  
+.btnimg {
+  background: url(../public/fbtn.png);
+  background-size: cover;
+  width: 140px;
+  height: 45px;
+  background-position: center;
+}
+
+  .btn_send_ph {
+    margin-left: 10px;
+    border: 0px solid;
+    background: #ff7ab4;
+    width: 100px;
+    height: 100%;
+    color: #FFF;
+    border-radius: 5px;
+    transition: all 0.5s;
   }
-  .fontpfood{
-    position: absolute;
-    font-size: 7vmin;
-    left: 55%;
-    top:9%;
+
+  .part {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    /* h1 같은 텍스트 단위 가운데 정렬 */
+    align-items: center;
+    /* 일반 a, div 가운데 정렬 */
   }
+  .slide {  
+    margin-top: 30px;
+    width: 100%;
+    height: 500px;
+  }
+  .part_slide {
+    background: url(../public/app_part_ground.jpg);
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% 100%;
+    background-position-x: center;
+    display: flex;
+   
+  }
+
+  
+.part_slide_title {
+  background: url(../public/titlefoo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 100% 100%;
+  height: 16%;
+  width: 100%;
+}
+
+  
+/* 4번째 예약자 카운터 뷰 */
+.part:nth-child(5) {
+  width: 100%;
+  height: 100vh;
+  background: url(../public/mobile5.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  background-size: 100% 100%;
+  /* padding: 30; */
+}
+
+
+.modal {
+  position: fixed;
+  left: 10%;
+  top: 30%;
+  overflow-y: scroll;
+  width: 270px;
+  height: 300px;
+  text-align: left;
+  padding: 15px;
+  z-index: 3;
+  background-color: #ffffff;
+  border-radius: 5px;
+  /* background-color: rgba(0, 0, 0, 0.295); */
+}
+
+.modal_btn_wrap{
+  position: fixed;
+  text-align: center;
+  left:10%;
+  top: 69%;
+  width:300px;
+}
+
+
+.modal_close{
+  background-color: rgba(0, 0, 0, 0);
+  border: 0px solid;
+  font-size: 20px;
+  font-weight: bold;
+  top: 10px;
+  left: 85%;
+  position: absolute;
+  z-index: 1;
+}
+
 }
