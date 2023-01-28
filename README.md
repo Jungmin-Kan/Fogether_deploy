@@ -10,4 +10,4 @@ yarn install
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+참고 [https://jaeseokim.tistory.com/114](https://jaeseokim.tistory.com/114).
