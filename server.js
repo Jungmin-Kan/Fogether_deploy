@@ -26,6 +26,7 @@ app.prepare().then(() => {
     return app.render(req, res, '/');
   });
   
+  // 위 라우터를 제외하고 나머지는 넥스트 자체 라우터에서 처리(/api, /pages)
   server.get('*', (req, res) => { return handle(req, res) });
   server.listen(port, (err, res) => { if (err) throw err })
 }).catch((e) => { console.error(e); })
